@@ -1,0 +1,5 @@
+
+tạo file migrate
+    npx knex migrate:make create_actions_table --knexfile ./src/databases/knex.js
+tạo file seeds
+    npx knex seed:make add_users --knexfile ./src/databases/knex.js
