@@ -1,0 +1,17 @@
+# Loại trừ các tệp log
+*.log
+
+# Loại trừ thư mục build
+/build
+
+# Loại trừ tất cả các tệp .tmp
+**/*.tmp
+
+# Loại trừ tệp cấu hình riêng tư
+config.ini
+*.config
+
+# Loại trừ thư mục node_modules nếu bạn sử dụng Node.js
+node_modules/
+
+.env
