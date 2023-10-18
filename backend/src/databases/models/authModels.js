@@ -18,7 +18,7 @@ const getPermission = async (id) => {
         .join(tableName.routers, 'route_action.id_route', 'routes.id')
         .join(tableName.actions, 'route_action.id_action', 'actions.id')
         // .select('routes.name as routerName', db.raw('GROUP_CONCAT(actions.name) as actionName'))
-        .select('routes.name as routerName', db.raw('JSON_OBJECTAGG(actions.name, actions.name) as actionName'))
+        .select('routes.name as routerName', db.raw('JSON_ARRAYAGG(actions.name) as actionName'))
         .groupBy('routes.name');
     console.log('res',res)
     return res;
