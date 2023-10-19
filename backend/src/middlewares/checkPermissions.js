@@ -4,11 +4,9 @@ const { secretKey } = require('../config/auth.config');
 const checkPermission = (permissionInfo) => {
     return async (req, res, next) => {
         try {
-            const {permission}= req.body;
+            const {permissions}= req.user;
             const { router, action } = permissionInfo;
-            const permissions = JSON.parse(permission);
             const foundRouter = permissions.find(item => item.routerName.toLowerCase() === router.toLowerCase());
-
             if (foundRouter) {
                 let actions = JSON.parse(foundRouter.actionName);
                 actions = actions.map(item => item.toLowerCase());
