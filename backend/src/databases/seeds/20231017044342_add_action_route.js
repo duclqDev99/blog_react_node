@@ -7,15 +7,63 @@ exports.seed = async function(knex) {
       .then(function () {
         return knex('route_action').insert([
           {
+            id: 1,
             id_action: 1,
             id_route: 1,
           },
           {
+            id: 2,
+            id_action: 2,
+            id_route: 1,
+          },
+          {
+            id: 3,
+            id_action: 3,
+            id_route: 1,
+          },
+          {
+            id: 4,
+            id_action: 6,
+            id_route: 1,
+          },
+          {
+            id: 5,
+            id_action: 1,
+            id_route: 2,
+          },
+          {
+            id: 6,
             id_action: 2,
             id_route: 2,
           },
           {
+            id: 7,
             id_action: 3,
+            id_route: 2,
+          },
+          {
+            id: 8,
+            id_action: 6,
+            id_route: 2,
+          },
+          {
+            id: 9,
+            id_action: 1,
+            id_route: 3,
+          },
+          {
+            id: 10,
+            id_action: 2,
+            id_route: 3,
+          },
+          {
+            id: 11,
+            id_action: 3,
+            id_route: 3,
+          },
+          {
+            id: 12,
+            id_action: 6,
             id_route: 3,
           },
           {
