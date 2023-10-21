@@ -15,7 +15,7 @@ const login= async (req, res) => {
 
         const permission = await authModels.getPermission(user.id);
 
-        const token = jwt.sign({ userId: user.id, username : user.name, permissions: permission }, secretKey, { expiresIn: '1h' });
+        const token = jwt.sign({ userId: user.id, username : user.name, permissions: permission }, secretKey, { expiresIn: '24h' });
 
         res.json({
             messenge : 'đăng nhập thành công!',
