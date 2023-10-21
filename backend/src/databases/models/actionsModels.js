@@ -3,7 +3,6 @@ const knexConfig = require('../knex');
 
 const db = knex(knexConfig.development);
 const databaseConfig = require('../../config/database.config')
-const {response} = require("express");
 const {tableName} = databaseConfig;
 
 const getAllActions= async (pagination) => {
